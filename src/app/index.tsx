@@ -1,6 +1,7 @@
 import { ScrollView, StyleSheet, Text } from 'react-native';
 import ExpenseCard from '@/components/ExpenseCard';
 import { expenses } from '@/data/expenses';
+import ExpenseDetails from '@/components/ExpenseDetails';
 
 export default function Index() {
   return (
@@ -9,6 +10,7 @@ export default function Index() {
       {expenses.map((expense) => (
         <ExpenseCard key={expense.id} expense={expense} />
       ))}
+      
     </ScrollView>
   );
 }
